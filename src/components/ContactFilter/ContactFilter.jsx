@@ -6,6 +6,7 @@ export const ContactFilter = () =>{
     const dispatch = useDispatch()
 
     const onInputChange = (e) =>{
+        console.log(e.target.value)
         dispatch(changeFilter(e.target.value))
     };
 
