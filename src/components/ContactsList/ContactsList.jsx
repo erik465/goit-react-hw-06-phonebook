@@ -13,7 +13,7 @@ export const ContactsList = () =>{
     const contacts = useSelector(getContact)
     const filter = useSelector(getFilter)
     const dispatch = useDispatch()
-    const visibleContacts = createVisibleContacts(contacts, filter)
+    const visibleContacts = filter ? createVisibleContacts(contacts, filter) : contacts
 
 
     return (
